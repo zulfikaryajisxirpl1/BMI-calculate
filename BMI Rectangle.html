@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rectangle-converter {
+            background-color: black;
+            color: azure;
+            width: 500px;
+            border: 10px solid red;
+            padding: 50px;
+            margin: auto;
+        }
+        button {
+            background-color: azure;
+            color: black;
+            border: none;
+            min-height: 30px;
+            min-width: 100px;
+            border-radius: 30px;
+        }
+        button:hover {
+            background-color: gray;
+            color: azure;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangle-converter">
+        <h1>BMI Rectangle</h1>
+        <p>Height</p>
+        <input class="height-input-field" type="text">
+        <p>Width</p>
+        <input class="width-input-field" type="text">
+        <button onclick="myFunction()" class="calculate">Calculator</button>
+    </div>
+    <script>
+        var heightInput = document.querySelector(".height-input-field");
+        var widthInput = document.querySelector(".width-input-field");
+        var calculateButton = document.querySelector(".calculate");
+        var result = document.querySelector("result");
+        var BMI, height, width;
+
+        function myFunction(){
+            height = heightInput.value;
+            width = widthInput.value;
+            BMI = width * height;
+            alert("Luas Persegi Panjangnya Adalah :" + BMI);
+        }
+    </script>
+</body>
+</html>
